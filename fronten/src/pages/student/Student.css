@@ -1,0 +1,323 @@
+/* =========================
+   STUDENT LAYOUT
+========================= */
+.student-wrapper {
+  display: flex;
+  height: 100vh;
+  background: #f8fafc;
+}
+
+/* Sidebar */
+.student-sidebar {
+  width: 220px;
+  background: linear-gradient(180deg, #1e293b, #020617);
+  color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.4s ease;
+}
+
+.student-logo {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.student-nav a {
+  color: #cbd5f5;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.student-nav a.active,
+.student-nav a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  transform: translateX(6px);
+}
+
+.student-logout {
+  margin-top: auto;
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.student-logout:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Main Content */
+.student-main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+/* =========================
+   STUDENT DASHBOARD
+========================= */
+.student-page {
+  max-width: 900px;
+  margin: auto;
+}
+
+.student-page h1 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #0f172a;
+}
+
+/* Survey Cards */
+.student-survey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.student-survey-card {
+  background: white;
+  padding: 22px;
+  border-radius: 20px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: #0f172a;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.student-survey-card h3 {
+  font-size: 17px;
+}
+
+.student-survey-card p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.student-survey-card span {
+  margin-top: auto;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.student-survey-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   SURVEY / FEEDBACK UI
+========================= */
+.feedback-card {
+  background: white;
+  padding: 35px;
+  border-radius: 26px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.question-block {
+  margin-bottom: 35px;
+}
+
+.question-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 14px;
+  color: #0f172a;
+}
+
+/* ⭐ STAR RATING */
+.stars {
+  display: flex;
+  gap: 6px;
+}
+
+.stars span {
+  font-size: 32px;
+  cursor: pointer;
+  color: #cbd5f5;
+  transition: 0.2s;
+}
+
+.stars span.active,
+.stars span:hover {
+  color: #facc15;
+  transform: scale(1.1);
+}
+
+/* 🙂 EMOJI RATING */
+.emojis {
+  display: flex;
+  gap: 12px;
+}
+
+.emojis span {
+  font-size: 34px;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: 0.2s;
+}
+
+.emojis span.active,
+.emojis span:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* 🔢 SLIDER */
+.slider-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.slider-box input[type="range"] {
+  flex: 1;
+  accent-color: #2563eb;
+}
+
+.slider-box span {
+  font-weight: 600;
+  color: #2563eb;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* 👍 GOOD / AVERAGE / BAD */
+.choices {
+  display: flex;
+  gap: 10px;
+}
+
+.choices button {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid #cbd5f5;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.choices button.active,
+.choices button:hover {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* 📝 TEXT FEEDBACK */
+.question-block textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #cbd5f5;
+  font-size: 14px;
+  resize: none;
+  transition: 0.3s;
+}
+
+.question-block textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* SUBMIT BUTTON */
+.submit-feedback {
+  width: 100%;
+  margin-top: 25px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  border: none;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-feedback:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(34, 197, 94, 0.4);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.feedback-card {
+  max-width: 500px;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.stars span {
+  font-size: 28px;
+  cursor: pointer;
+  color: #e5e7eb;
+  margin-right: 6px;
+}
+
+.stars span.active {
+  color: gold;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+}
+
+.submit-feedback {
+  margin-top: 15px;
+  width: 100%;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
